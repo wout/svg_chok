@@ -1,6 +1,6 @@
+*.dwarf
+/.shards/
+/bin/
 /docs/
 /lib/
-/bin/
-/.shards/
-*.dwarf
 /svgs/
