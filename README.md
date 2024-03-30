@@ -24,7 +24,7 @@ By default, Sverchok creates a HTML file which you can load into your browser. T
 1. There's a lot of unnecessary rendering of the SVG file, which may be an issue with complex scenes.
 2. Since it's a file loaded into your browser, the output can't run through a HTTP tunnel (e.g. NGrok) to easily display the output on other devices.
 
-While both arguments are not necessarily applicable to all use cases, another benefit is a nicer layout and a browsable index of all SVGs, with previews. So wither way, it's always a better experience than using the default HTML file.
+While both arguments are not necessarily applicable to all use cases, another benefit is a nicer layout and a browsable index of all SVGs, with previews. So either way, it's always a better experience than using the default HTML file.
 
 ## Contributing
 
