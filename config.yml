@@ -1,0 +1,4 @@
+# dir where your svg files are located
+dir: ./svgs
+# uncomment the line below to set another port
+# port: 4141

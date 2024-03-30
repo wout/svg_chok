@@ -1,0 +1,11 @@
+<% content_for "title" do %>Index<% end %>
+
+<main>
+  <ul>
+    <% svgs.each do |svg| %>
+      <li>
+        <a href="<%= svg.relative_path %>"><%= svg.relative_path %></a>
+      </li>
+    <% end %>
+  </ul>
+</main>

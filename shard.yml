@@ -1,0 +1,17 @@
+name: svg_chock
+version: 0.1.0
+
+authors:
+  - Wout <hi@wout.codes>
+
+targets:
+  svg_chock:
+    main: src/svg_chock.cr
+
+crystal: ">= 1.11.2"
+
+license: MIT
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
