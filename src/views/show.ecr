@@ -1,13 +1,17 @@
 <% content_for "title" do %><%= svg.relative_path %><% end %>
 
+<header>
+  <h1>
+    <span>name:</span>
+    <%= svg.name %>
+  </h1>
+  <p><a href="/">&laquo; back to list</a></p>
+</header>
+
 <main>
   <div id="sketch"
        style="--ratio: <%= svg.metadata.ratio %>"
        @sync="<%= svg.absolute_path %>">
-    <img src="/svgs<%= svg.relative_path %>">
+    <img src="<%= svg.image_path %>">
   </div>
 </main>
-
-<footer>
-  <%= svg.name %>
-</footer>

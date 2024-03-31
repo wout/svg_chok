@@ -1,11 +1,14 @@
 <% content_for "title" do %>Index<% end %>
 
-<main @sync>
-  <ul>
-    <% svgs.each do |svg| %>
-      <li>
-        <a href="<%= svg.relative_path %>"><%= svg.relative_path %></a>
-      </li>
-    <% end %>
-  </ul>
+<main class="grid" @sync>
+  <% svgs.each do |svg| %>
+    <article>
+      <a href="<%= svg.relative_path %>">
+        <img src="<%= svg.image_path %>">
+        <h2>
+          <%= svg.name %>
+        </h2>
+      </a>
+    </article>
+  <% end %>
 </main>

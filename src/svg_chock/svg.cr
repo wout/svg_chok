@@ -17,6 +17,10 @@ struct SvgChock::Svg
     @metadata ||= SvgChock::Metadata.new(content)
   end
 
+  def image_path
+    File.join("/svgs", "#{relative_path}?t=#{Time.local.to_unix}")
+  end
+
   def self.all
     Dir.glob(File.join(SvgChock.config.dir, "**/*.svg")).map do |path|
       new(path)

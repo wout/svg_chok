@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Watch changes for specific files
   document.querySelectorAll('[\\@sync]').forEach((el) => {
-    openWebsocket((e) =>
-      handleSync(el.getAttribute('@sync'), JSON.parse(e.data)),
-    )
+    openWebsocket(el)
   })
 
   // Navigate without reloading the page
@@ -18,19 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
   window.onpopstate = () => fetchBody(location.href)
 })
 
-function openWebsocket(handler) {
-  const ws = buildWebsocket()
+function openWebsocket(el) {
+  const protocol = location.protocol === 'https:' ? 'wss' : 'ws'
+  const ws = new WebSocket(protocol + '://' + location.host + '/watcher')
   ws.onopen = () => console.log('SvgChock: connected to watcher')
-  ws.onmessage = handler
+  ws.onmessage = (e) => handleSync(el.getAttribute('@sync'), JSON.parse(e.data))
   window.onbeforeunload = () => {
     ws.onclose = () => console.log('SvgChock: disconnecting from watcher')
     ws.close()
   }
-}
-
-function buildWebsocket() {
-  const protocol = location.protocol === 'https:' ? 'wss' : 'ws'
-  return new WebSocket(protocol + '://' + location.host + '/watcher')
 }
 
 function handleSync(file, { files }) {
