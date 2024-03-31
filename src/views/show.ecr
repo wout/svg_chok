@@ -1,3 +1,14 @@
 <% content_for "title" do %><%= svg.relative_path %><% end %>
 
-<%= svg.content %>
+<main>
+  <div id="sketch"
+       style="--ratio: <%= svg.metadata.ratio %>"
+       @sync="<%= svg.absolute_path %>">
+    <img src="data:image/svg+xml,<%= svg.encoded_content %>">
+  </div>
+</main>
+
+<footer>
+  buttons hee
+  <%= svg.name %>
+</footer>

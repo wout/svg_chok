@@ -1,6 +1,6 @@
 # SVGchock
 
-A micro app written in Crystal to visualise Sverchok SVG output using SSE.
+A micro app written in Crystal to visualise Sverchok SVG output.
 
 ## Installation
 

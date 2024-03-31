@@ -13,6 +13,14 @@ struct SvgChock::Svg
     File.read(absolute_path)
   end
 
+  def encoded_content
+    URI.encode_path(content)
+  end
+
+  def metadata
+    @metadata ||= SvgChock::Metadata.new(content)
+  end
+
   def self.all
     Dir.glob(File.join(SvgChock.config.dir, "**/*.svg")).map do |path|
       new(path)

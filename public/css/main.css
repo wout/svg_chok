@@ -1,0 +1,153 @@
+/* reset  */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* base */
+@font-face {
+  font-family: 'Hershey-Noailles-Futura-Simplex';
+  src: url('/fonts/Hershey-Noailles-Futura-Simplex-Light.woff') format('woff');
+  font-weight: 300;
+}
+
+:root {
+  --font: 'Hershey-Noailles-Futura-Simplex', sans-serif;
+  --color-back: #f9f9f9;
+  --color-text: #333;
+}
+
+body {
+  background-color: var(--color-back);
+  color: var(--color-text);
+  font-family: var(--font);
+  font-size: calc(1rem + 0.25vw);
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0;
+}
+
+main {
+  flex-grow: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+header {
+  padding: 0.75em 0;
+}
+
+footer {
+  padding: 0.5em 0;
+}
+
+/* sketches#show */
+#sketch {
+  background-color: #fff;
+  box-shadow: 0 0.1em 0.5em 1px rgba(0, 0, 0, 0.2);
+  aspect-ratio: var(--ratio, 1);
+  max-width: calc(100vw - 3em);
+  max-height: calc(100vh - 6em);
+}
+
+#sketch svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}

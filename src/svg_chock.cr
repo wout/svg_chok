@@ -1,5 +1,8 @@
-require "yaml"
+require "colorize"
 require "kemal"
+require "xml"
+require "yaml"
+
 require "./svg_chock/**"
 require "./routes/**"
 
