@@ -9,7 +9,7 @@ ws "/watcher" do |socket|
     while !socket.closed?
       socket.send({files: watcher.changes}.to_json)
 
-      sleep 0.5
+      sleep 1
     end
   end
 
