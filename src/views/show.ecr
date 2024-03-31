@@ -4,11 +4,10 @@
   <div id="sketch"
        style="--ratio: <%= svg.metadata.ratio %>"
        @sync="<%= svg.absolute_path %>">
-    <img src="data:image/svg+xml,<%= svg.encoded_content %>">
+    <img src="/svgs<%= svg.relative_path %>">
   </div>
 </main>
 
 <footer>
-  buttons hee
   <%= svg.name %>
 </footer>

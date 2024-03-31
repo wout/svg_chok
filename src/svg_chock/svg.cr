@@ -6,15 +6,11 @@ struct SvgChock::Svg
   def initialize(path)
     @absolute_path = File.expand_path(path)
     @relative_path = absolute_path.sub(File.expand_path(SvgChock.config.dir), "")
-    @name = relative_path.sub(/^\//, "").sub(/\.svg$/, "")
+    @name = relative_path.sub(/^\//, "")
   end
 
   def content
     File.read(absolute_path)
-  end
-
-  def encoded_content
-    URI.encode_path(content)
   end
 
   def metadata
