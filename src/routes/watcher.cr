@@ -3,7 +3,7 @@ SOCKETS = [] of HTTP::WebSocket
 ws "/watcher" do |socket|
   SOCKETS << socket
 
-  watcher = SvgChock::Watcher.new
+  watcher = SvgChok::Watcher.new
 
   spawn do
     while !socket.closed?

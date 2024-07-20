@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
 function openWebsocket(el) {
   const protocol = location.protocol === 'https:' ? 'wss' : 'ws'
   const ws = new WebSocket(protocol + '://' + location.host + '/watcher')
-  ws.onopen = () => console.log('SvgChock: connected to watcher')
+  ws.onopen = () => console.log('SvgChok: connected to watcher')
   ws.onmessage = (e) => handleSync(el.getAttribute('@sync'), JSON.parse(e.data))
   window.onbeforeunload = () => {
-    ws.onclose = () => console.log('SvgChock: disconnecting from watcher')
+    ws.onclose = () => console.log('SvgChok: disconnecting from watcher')
     ws.close()
   }
 }

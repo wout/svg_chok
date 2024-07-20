@@ -3,13 +3,13 @@ require "kemal"
 require "xml"
 require "yaml"
 
-require "./svg_chock/**"
+require "./svg_chok/**"
 require "./routes/**"
 
-module SvgChock
+module SvgChok
   class_getter config = Config.from_yaml(File.open("./config.yml"))
 end
 
-Dir.mkdir_p(SvgChock.config.dir)
+Dir.mkdir_p(SvgChok.config.dir)
 
-Kemal.run(SvgChock.config.port)
+Kemal.run(SvgChok.config.port)

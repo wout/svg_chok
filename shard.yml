@@ -1,14 +1,14 @@
-name: svg_chock
+name: svg_chok
 version: 0.1.0
 
 authors:
   - Wout <hi@wout.codes>
 
 targets:
-  svg_chock:
-    main: src/svg_chock.cr
+  svg_chok:
+    main: src/svg_chok.cr
 
-crystal: ">= 1.11.2"
+crystal: '>= 1.11.2'
 
 license: MIT
 

@@ -1,4 +1,4 @@
-struct SvgChock::Config
+struct SvgChok::Config
   include YAML::Serializable
 
   getter dir : String

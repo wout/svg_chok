@@ -1,12 +1,12 @@
-# SVGchock
+# SVGchok
 
 A micro app written in Crystal to visualise Sverchok SVG output.
 
 ## Installation
 
 1. Install Crystal: https://crystal-lang.org/install/
-2. Clone the repo: `git clone https://github.com/wout/svg_chock`
-3. Cd into the repo: `cd svg_chock`
+2. Clone the repo: `git clone https://github.com/wout/svg_chok`
+3. Cd into the repo: `cd svg_chok`
 4. Run the app: `shards run`
 
 **Note**: On the first run, the app will install the required dependencies.
@@ -28,7 +28,7 @@ While both arguments are not necessarily applicable to all use cases, another be
 
 ## Contributing
 
-1. Fork it (<https://github.com/wout/svg_chock/fork>)
+1. Fork it (<https://github.com/wout/svg_chok/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'feat: add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

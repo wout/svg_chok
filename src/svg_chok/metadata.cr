@@ -1,4 +1,4 @@
-struct SvgChock::Metadata
+struct SvgChok::Metadata
   getter width : Float64
   getter height : Float64
 

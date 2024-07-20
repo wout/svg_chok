@@ -1,10 +1,10 @@
-struct SvgChock::Watcher
+struct SvgChok::Watcher
   getter pattern : String
   getter files = [] of String
   getter timestamps = {} of String => Time
 
   def initialize
-    @pattern = File.expand_path(File.join(SvgChock.config.dir, "**", "*.svg"))
+    @pattern = File.expand_path(File.join(SvgChok.config.dir, "**", "*.svg"))
     collect_files
   end
 
@@ -30,7 +30,7 @@ struct SvgChock::Watcher
 
   private def log_changes(changed)
     changed.each do |file|
-      Log.info { "SvgChock: detected change in #{file}".colorize(:cyan) }
+      Log.info { "SvgChok: detected change in #{file}".colorize(:cyan) }
     end
   end
 
